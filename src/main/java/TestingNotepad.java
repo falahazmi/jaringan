@@ -30,12 +30,13 @@ public class TestingNotepad extends javax.swing.JFrame {
             InputStream file = new FileInputStream(dir);    
             int data = file.read();
             while (data != -1) {
-                isi += ((char) data);
-//                System.out.write(data);
+                if((char)data!='a'&&(char)data!='i'&&(char)data!='u'&&(char)data!='e'&&(char)data!='o'){
+                    isi += ((char) data);
+                }
+                
                 data = file.read();
             }
             file.close();
-//            fileTextArea.setText(isi);
         } catch (IOException e){
             System.out.println(e);
         }
