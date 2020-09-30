@@ -30,10 +30,11 @@ public class TestingNotepad extends javax.swing.JFrame {
             InputStream file = new FileInputStream(dir);    
             int data = file.read();
             while (data != -1) {
-                if((char)data!='a'&&(char)data!='i'&&(char)data!='u'&&(char)data!='e'&&(char)data!='o'){
+//                isi += ((char) data);
+//                data = file.read();
+                if((char)data!='a'&&(char)data!='A'&&(char)data!='i'&&(char)data!='I'&&(char)data!='u'&&(char)data!='U'&&(char)data!='e'&&(char)data!='E'&&(char)data!='o'&&(char)data!='O'){
                     isi += ((char) data);
                 }
-                
                 data = file.read();
             }
             file.close();
